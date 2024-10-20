@@ -2,24 +2,39 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <SplitPane dividerPositions="0.4" prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.alquiler.controller.InicioController">
 
     <items>
 
         <AnchorPane fx:id="panelIzquierdo" maxWidth="250.0">
-
-            <Button fx:id="btnInicioRegCli" layoutX="21.0" layoutY="45.0" onAction="#mostrarRegistroCliente" prefHeight="41.0" prefWidth="194.0" />
-            <Button fx:id="btnInicioRegVeh" layoutX="21.0" layoutY="108.0" lineSpacing="1.0" onAction="#mostrarRegistroVehiculo" prefHeight="41.0" prefWidth="194.0" />
-            <Button fx:id="btnInicioRegAlq" layoutX="21.0" layoutY="171.0" onAction="#mostrarRegistroAlquiler" prefHeight="41.0" prefWidth="194.0" />
-            <Button fx:id="btnClientes" layoutX="21.0" layoutY="234.0" onAction="#mostrarClientes" prefHeight="41.0" prefWidth="194.0" />
-
-            <Button fx:id="btnCambiarIdioma" layoutX="21.0" layoutY="508.0" mnemonicParsing="false" onAction="#cambiarIdioma" text="Cambiar idioma" />
+         <children>
+            <Label fx:id="tituloShakiraLbl" layoutX="19.0" layoutY="25.0" prefHeight="54.0" prefWidth="213.0" text=" Concierto shakira">
+               <font>
+                  <Font name="Bodoni MT Black" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="nombreLbl" layoutX="19.0" layoutY="102.0" text="Nombre" />
+            <Label fx:id="cedulaLbl" layoutX="19.0" layoutY="141.0" text="Cedula" />
+            <Label fx:id="claseLbl" layoutX="19.0" layoutY="181.0" text="Clase" />
+            <ComboBox fx:id="claseComBox" layoutX="72.0" layoutY="177.0" prefHeight="25.0" prefWidth="166.0" />
+            <TextField fx:id="nombreText" layoutX="73.0" layoutY="98.0" prefHeight="25.0" prefWidth="166.0" />
+            <TextField fx:id="cedulaText" layoutX="73.0" layoutY="137.0" prefHeight="25.0" prefWidth="166.0" />
+            <Button fx:id="comprarButton" layoutX="100.0" layoutY="243.0" mnemonicParsing="false" text="Comprar" />
+         </children>
 
         </AnchorPane>
 
         <AnchorPane fx:id="panelDerecho">
             <AnchorPane fx:id="panelFormulario" layoutX="30.0" />
+         <TableView fx:id="tablaCompradores" layoutX="46.0" layoutY="74.0" prefHeight="333.0" prefWidth="357.0">
+           <columns>
+             <TableColumn fx:id="nombreColumn" prefWidth="91.0" text="Nombre" />
+             <TableColumn fx:id="cedulaColumn" prefWidth="194.0" text="Cedula" />
+               <TableColumn fx:id="columnClase" prefWidth="71.0" text="Clase" />
+           </columns>
+         </TableView>
         </AnchorPane>
 
     </items>
