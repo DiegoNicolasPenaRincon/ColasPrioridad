@@ -21,7 +21,7 @@
             <ComboBox fx:id="claseComBox" layoutX="72.0" layoutY="177.0" prefHeight="25.0" prefWidth="166.0" />
             <TextField fx:id="nombreText" layoutX="73.0" layoutY="98.0" prefHeight="25.0" prefWidth="166.0" />
             <TextField fx:id="cedulaText" layoutX="73.0" layoutY="137.0" prefHeight="25.0" prefWidth="166.0" />
-            <Button fx:id="comprarButton" layoutX="100.0" layoutY="243.0" mnemonicParsing="false" text="Comprar" />
+            <Button fx:id="comprarButton" layoutX="100.0" layoutY="243.0" mnemonicParsing="false" onAction="#comprarBoleto" text="Comprar" />
          </children>
 
         </AnchorPane>

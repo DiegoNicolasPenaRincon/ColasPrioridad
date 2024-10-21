@@ -1,28 +1,37 @@
 package co.edu.uniquindio.alquiler.model;
 
-public class Nodo {
+public class Nodo<T> {
 
-    private int dato;
-    private Nodo siguiente;
+    private T valor;
+    private Nodo<T> siguienteNodo;
+    private int prioridad;
 
-    public Nodo(int dato) {
-        this.dato = dato;
+    public Nodo(T dato,int prioridad) {
+        this.valor = dato;
+        this.prioridad=prioridad;
     }
 
-    public int getDato() {
-        return dato;
+    public T getValor() {
+        return valor;
     }
 
-    public void setDato(int dato) {
-        this.dato = dato;
+    public void setValor(T valor) {
+        this.valor = valor;
     }
 
-    public Nodo getSiguiente() {
-        return siguiente;
+    public int getPrioridad() {
+        return prioridad;
     }
 
-    public void setSiguiente(Nodo siguiente) {
-        this.siguiente = siguiente;
+    public void setPrioridad(int prioridad) {
+        this.prioridad = prioridad;
     }
 
+    public Nodo<T> getSiguienteNodo() {
+        return siguienteNodo;
+    }
+
+    public void setSiguienteNodo(Nodo<T> siguienteNodo) {
+        this.siguienteNodo = siguienteNodo;
+    }
 }
