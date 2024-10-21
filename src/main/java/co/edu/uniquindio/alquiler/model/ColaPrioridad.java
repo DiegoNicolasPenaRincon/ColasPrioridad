@@ -1,9 +1,10 @@
 package co.edu.uniquindio.alquiler.model;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
-public class ColaPrioridad<T> {
+public class ColaPrioridad<T>  {
 
     public Nodo<T> nodoPrimero, nodoUltimo;
     public int tamanio;
@@ -124,5 +125,19 @@ public class ColaPrioridad<T> {
         System.out.println();
     }
 
+    /**
+     * Castea la cola para que pueda ser mostrada por un tableView
+     * @return
+     */
+    public Collection<T> toCollection() {
+        Collection<T> c=new ArrayList<>();
+        Nodo<T> aux=nodoPrimero;
+        while(aux!=null)
+        {
+            c.add(aux.getValor());
+            aux = aux.getSiguienteNodo();
+        }
+        return c;
+    }
 
 }
